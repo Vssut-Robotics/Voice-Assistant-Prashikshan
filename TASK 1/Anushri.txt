@@ -1,0 +1,48 @@
+VOICE ASSISTANT:
+A voice assistant is software that performs tasks according to the verbal commands a user provides. It interprets human speech and responds via synthesized voices.
+The user can ask questions, control devices, and manage other tasks like opening and closing apps. The user speaks words and phrases, and the system analyses them.
+
+Voice assistants are already being used in multiple different ways and industries: They are used in smartphones and smartspeakers, in mobile apps and operating systems, 
+in cars, in sales, in medical care, and telecommunications. The latest developments in this space will be vital for companies’ future successes.
+As “voice” is here to stay and voice assistants and smartspeakers will be some of the primary drivers of its development.
+
+Using Pyttsx3:
+pyttsx3 is a text-to-speech conversion library in Python. Unlike alternative libraries, it works offline, and is compatible with both Python 2 and 3.
+
+# pip install pyttsx3 pypiwin32
+import pyttsx3
+# One time initialization
+engine = pyttsx3.init()
+# Set properties _before_ you add things to say
+engine.setProperty('rate', 150)                  # Speed percent (can go over 100)
+engine.setProperty('volume', 0.9)                # Volume 0-1
+# Queue up things to say.
+# There will be a short break between each one when spoken, like a pause between sentences.
+engine.say("You have got mail")
+engine.say("You can queue up multiple times")
+engine.runAndWait()                              # Flush the say() queue and play the audio
+# Program will not continue execution until all speech is done talking
+
+USING SPEECH RECOGNITION:
+
+import speech_recognition as sr
+# get audio from the microphone
+r = sr.Recognizer()
+with sr.Microphone() as source:
+  print("Speak")
+  audio = r.listen(source)
+try:
+  print(&quot;You said &quot; + r.recognize_google(audio))
+except sr.UnknownValueError:
+  print("Could not understand audio")
+except sr.RequestError as e:
+  print("Could not request results; {0}".format(e))
+
+
+In general voice assistants react to voice commands and give the user relevant information about his inquiry. 
+Presently voice assistants are already able to process orders of products, answer questions, perform actions like playing music or start a simple phone call with a friend.
+The basics of the technology currently exist and the next few years will be used to develop these artificially intelligent assistants even further, 
+enabling them to have more complex capabilities.
+ 
+The long-term vision for voice assistants is to act as a smart bridge between humans and the vast knowledge and capacities which the internet delivers. 
+Taking away the need to use any device or screen to interact with the internet, technology or other humans in different locations. Soon we’ll be able to do it all with our voices only.
