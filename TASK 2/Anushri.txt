@@ -1,0 +1,50 @@
+
+
+import datetime
+from gtts import gTTS
+import os
+import speech_recognition as sr
+import pyowm
+currentDT = datetime.datetime.now()
+hr = currentDT.hour
+mn = currentDT.minute
+owm = pyowm.OWM('05d8fa044dc24ee2a497c234c321551c')
+observation = owm.weather_at_place('Bhubaneshwar,IN')
+w = observation.get_weather()
+temp= w.get_temperature('celsius')['temp']
+def greet():
+  if currentDT.hour < 12 :
+    first = gTTS(text=" hello, good mornig sir todays temperature is {} degree celsius and the time
+is {} hours {} minutes ".format(temp,hr,mn), lang='en')
+    first.save("idk1.mp3")
+    os.system("start idk1.mp3")
+
+  elif currentDT.hour > 12 and currentDT.hour < 18 :
+    second = gTTS(text=" hello, good afternoon sir todays temperature is {} degree celsius and the
+time is {} hours {} minutes ".format(temp,hr,mn), lang='en')
+    second.save("idk2.mp3")
+    os.system("start idk2.mp3")
+  elif currentDT.hour > 18 and currentDT.hour < 24 :
+    third = gTTS(text=" hello, good evening sir todays temperature is {} degree celsius and the
+time is {} hours {} minutes ".format(temp,hr,mn), lang='en')
+    third.save("idk3.mp3")
+    os.system("start idk3.mp3")
+r = sr.Recognizer()
+txt=" "
+with sr.Microphone() as source:
+  print("speak")
+  audio = r.listen(source)
+  try:
+    txt = r.recognize_google(audio)
+  except:
+    prob = gTTS(text=" Sorry i could not hear you ", lang='en')
+    prob.save("idk.mp3")
+    os.system("start idk.mp3")
+said = "hello"
+
+if txt==said:
+  greet()
+else:
+  nomatch = gTTS(text=" sorry i can't help you i am still learning ", lang='en')
+  nomatch.save("idk4.mp3")
+  os.system("start idk4.mp3")
