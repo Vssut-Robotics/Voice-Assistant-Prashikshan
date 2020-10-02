@@ -2,7 +2,7 @@
 
 ## Learning motion planning and algos
 
-Consisting 5 Tasks:
+Consisting of total 5 Tasks:
 
 1. Understanding Voice Assistant and Speech-to-Text libraries
 2. Understanding about Personal Voice Assistance.
