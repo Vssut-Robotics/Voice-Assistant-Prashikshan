@@ -1,0 +1,35 @@
+import pafy
+import vlc
+import time
+import urllib.request
+import urllib.pars
+import speech_recognition as sr
+from gtts import gTTS
+import os
+
+r = sr.Recognizer()
+r1 = sr.Recognizer()
+
+with sr.Microphone() as source:
+       audio=r.listen(source)
+       voice_data=""
+       voice_data=r.recognize_google(audio)
+
+ if 'play me a song' in voice_data:
+     jarvis_speak('What song shall I play sir?')
+     audio1=r1.listen(source)
+     voice_d = r1.recognize_google(audio1)
+     query_string = urllib.parse.urlencode({"search_query" : voice_d()})
+     search_results = re.findall(r'href=\"\/watch\?v=(.{11})', html_content.read().decode())
+     t=("http://www.youtube.com/watch?v=" + search_results[0])
+     video = pafy.new(t)
+     best = video.getbest()
+     playurl = best.url
+     Instance = vlc.Instance()
+     player = Instance.media_player_new()
+     Media = Instance.media_new(playurl)
+     Media.get_mrl()
+     player.set_media(Media)
+     player.play()
+     time.sleep(120)
+

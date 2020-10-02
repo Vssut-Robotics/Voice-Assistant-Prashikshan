@@ -1,0 +1,26 @@
+DOCMENTATION ON  DIFFERENT MODULES   
+In task 2, the different modules that  were used are as follows :-  
+  
+1.PLAYSOUND MODULE  
+The playsound module is a cross platform module that can play audio files. This  doesn't have any dependencies, it can be simply installed with pip in virtualenv  and run. Implementation is different on platforms. Its implementation is  different on different platforms. It uses windll.winm on Windows,  AppKit.NSSound on Apple OS X and GStreamer on Linux. 
+2.TIME MODULE
+Python has a module named time to handle time-related tasks. To use functions defined in the module, we need to import the module first. Here's how:
+import time
+
+3.gtts MODULE  
+gTTS (Google Text-to-Speech), a Python library and CLI tool to interface with  Google Translate's text-to-speech API. It writes spoken mp3 data to a file, a file-
+like object (bytestring) for further audio manipulation, or stdout . It features  flexible pre-processing and tokenizing, as well as automatic retrieval of  supported languages. 
+4.PLAYSOUND MODULE
+The playsound module is a cross platform module that can play audio files. This doesn't have any dependencies, simply install with pip in your virtualenv and run! Implementation is different on platforms. It uses windll.
+5.DATETIME MODULE  
+Datetime module supplies classes to work with date and time. These classes provide a number of functions to deal with dates, times and time intervals. Date and datetime are an object in Python, so when you manipulate them, you are actually manipulating objects and not string or timestamps. 
+  
+6.PYOWM MODULE  
+PyOWM is a client Python wrapper library for OpenWeatherMap web APIs. It allows quick and easy consumption of OWM data from Python applications via a simple object model and in a human-friendly fashion. 
+ 
+7.RANDOM MODULE  
+This module implements pseudo-random number generators for various distributions. The functions supplied by this module are actually bound methods of a hidden instance of the random.Random class. You can instantiate your own instances of Random to get generators that don’t share state. The pseudo-random generators of this module should not be used for security purposes.
+8.VLC MODULE  
+This module provides ctypes-based bindings for the native libvlc API of the VLC  video player.It relies on an already present install of VLC.It has been  automatically generated from the include files of vlc 3.0.9, using generator 1.13. 
+9.OS MODULE
+The OS module in python provides functions for interacting with the operating system. OS, comes under Python's standard utility modules. This module provides a portable way of using operating system dependent functionality.

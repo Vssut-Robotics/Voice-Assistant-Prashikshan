@@ -1,0 +1,48 @@
+DOCMENTATION ON  DIFFERENT MODULES   
+In task 3, the different modules that  were used are as follows :-  
+  
+1.PLAYSOUND MODULE  
+The playsound module is a cross platform module that can play audio files. This  doesn't have any dependencies, it can be simply installed with pip in virtualenv  and run. Implementation is different on platforms. Its implementation is  different on different platforms. It uses windll.winm on Windows,  AppKit.NSSound on Apple OS X and GStreamer on Linux. 
+
+2.OS MODULE  
+The OS module in Python provides a way of using operating system dependent  functionality. The functions that the OS module provides allows one to interface  with the underlying operating system that Python is running on – be that  Windows, Mac or Linux. This module provides a portable way of using operating  system dependent functionality. The *os* and *os. path* modules include  many functions to interact with the file system.
+
+3.gtts MODULE  
+gTTS (Google Text-to-Speech), a Python library and CLI tool to interface with  Google Translate's text-to-speech API. It writes spoken mp3 data to a file, a file-
+like object (bytestring) for further audio manipulation, or stdout . It features  flexible pre-processing and tokenizing, as well as automatic retrieval of  supported languages.
+
+4.WEBBROWSER MODULE  
+The webbrowser module provides a high-level interface to allow displaying  Web-based documents to users. Under most circumstances, simply calling  the open() function from this module will do the right thing. 
+Under Unix, graphical browsers are preferred under X11, but text-mode  browsers will be used if graphical browsers are not available or an X11 display  isn’t available. If text-mode browsers are used, the calling process will block  until the user exits the browser. 
+
+5.RE MODULE  
+A regular expression (or RE) specifies a set of strings that matches it; the  functions in this module let you check if a particular string matches a given  regular expression (or if a given regular expression matches a particular string,  
+which comes down to the same thing).  
+  
+6.FEEDPARSER MODULE  
+Universal Feed Parser is a Python module for downloading and parsing  syndicated feeds. It can handle RSS 0.90, Netscape RSS 0.91, Userland RSS 0.91,  RSS 0.92, RSS 0.93, RSS 0.94, RSS 1.0, RSS 2.0, Atom 0.3, Atom 1.0, and CDF  feeds. It also parses several popular extension modules, including Dublin Core  and Apple’s iTunes extensions. 
+Universal Feed Parser is easy to use; the module is self-contained in a single  file, feedparser.py, and it has one primary public function, parse(). parse() takes  a number of arguments, but only one is required, and it can be a URL, a local  filename, or a raw string containing feed data in any format. 
+ 
+7.PAFY MODULE  
+Pafy library is used to retrieve YouTube content and metadata. 
+Features of Pafy 
+(i) Retrieve metadata such as viewcount, duration, rating, author, thumbnail,  keywords. 
+(ii) Download video or audio at requested resolution / bitrate / format / filesize (iii) Command line tool (ytdl) for downloading from the command line (iv) Download video only (no audio) in m4v or webm format 
+(v) Download audio only (no video) in ogg or m4a format 
+(vi) Works with Python 2.6+ and 3.3+ 
+(vii) Optionally depends on youtube-dl 
+
+8.VLC MODULE  
+This module provides ctypes-based bindings for the native libvlc API of the VLC  video player.It relies on an already present install of VLC.It has been  automatically generated from the include files of vlc 3.0.9, using generator 1.13. 
+
+9.URLLIB.REQUEST MODULE  
+The urllib.request module defines functions and classes which help in opening  URLs (mostly HTTP) in a complex world — basic and digest authentication,  redirections, cookies and more. 
+The Requests package is recommended for a higher-level HTTP client interface. The urllib.request module defines the following functions: 
+urllib.request.urlopen(url, data=None, [timeout, ]*, cafile=None, capath=None, c adefault=False, context=None) 
+
+10.URLLIB.PARSE MODULE  
+Urllib module is the URL handling module for python. It is used to fetch URLs  (Uniform Resource Locators). It uses the urlopen function and is able to fetch  URLs using a variety of different protocols. urllib.parse is for parsing URLs.
+
+11.BEAUTIFUL SOUP  
+Beautiful Soup is a python package for parsing HTML and XML documents (including  having malformed markup, i.e. non-closed tags, so named after tag soup). It creates a parse  tree for parsed pages that can be used to extract data from HTML, which is useful web  scraping . 
+ 
