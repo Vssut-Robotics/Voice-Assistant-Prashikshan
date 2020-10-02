@@ -1,0 +1,48 @@
+import feedparser
+import speech_recognition
+import playsound
+from gtts import gTTS
+import os
+
+r = sr.Recognizer()
+
+with sr.Microphone() as source:
+       audio=r.listen(source)
+       voice_data=""
+       voice_data=recognize_google(audio)
+
+if 'news for today' in voice_data:
+
+ def parseRSS(rss_url):
+       return feedparser.parse(rss_url)
+
+
+ def getHeadlines(rss_url):
+       headlines = []
+
+       feed = parseRSS(rss_url)
+       for newsitem in feed['items']:
+              headlines.append(newsitem['title'])
+
+       return headlines
+
+allheadlines = []
+
+newsurls = {'googlenews': 'https://news.google.com/news/rss/?hl=en&amp;ned=us&amp;gl=US',}
+
+
+for key, url in newsurls.items():
+       allheadlines.extend(getHeadlines(url))
+
+for hl in allheadlines:
+ jarvis_speak(hl)
+
+
+ def jarvis_speak(audio_string):
+        tts = gTTS(text=audio_string, lang='en')
+        r = random.randint(1, 20000000)
+        audio_file = 'audio' + str(r) + '.mp3'
+        say.save(audio_file)
+        playsound.playsound(audio_file)
+        print(audio_string)
+        os.remove(audio_file)
