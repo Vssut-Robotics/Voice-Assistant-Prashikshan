@@ -1,0 +1,26 @@
+SOCKET PROGRAMMING
+
+1: SERVER.PY
+
+import socket
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s = socket.gethostbyname(socket.gethostname())
+s.listen(5)
+
+while True:
+    clt, adr = s.accept()
+    clt.send(bytes("Hello there User!", utf-8))
+
+2: CLIENT.PY
+
+import socket
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect(socket.gethostname())
+complete_info = ''
+
+while True:
+    msg = s.recv(8)
+    if len(msg) <= 0:
+        break
+        complete_info += msg.decode("utf-8")
+        print(complete_info)
